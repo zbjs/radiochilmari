@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import Navbar from '@/components/ui/Navbar';
-
+import Footer from "@/components/ui/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +24,7 @@ export default async function RootLayout({
         <div className="flex-grow container mx-auto px-4 pt-20">
         {children}
         </div>
+        <Footer />
        
       </body>
     </html>
