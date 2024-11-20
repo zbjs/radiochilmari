@@ -1,17 +1,46 @@
-const imageUrls = [
-    "https://github.com/zbjs/radiochilmari/blob/dev/src/assets/images/top_regular_program/radiochilmari_%E0%A6%89%E0%A6%A8%E0%A7%8D%E0%A6%A8%E0%A7%9F%E0%A6%A8%20%E0%A6%B8%E0%A6%82%E0%A6%AC%E0%A6%BE%E0%A6%A6.jpg?raw=true",
+import img1 from "@/assets/images/top_regular_program/radiochilmari_উন্নয়ন _সংবাদ.jpg"
+import img2 from "@/assets/images/top_regular_program/radiochilmari_কবির_হাট.jpg"
+import img3 from "@/assets/images/top_regular_program/radiochilmari_টোনা_টুনির_গল্প.png"
+import img4 from "@/assets/images/top_regular_program/radiochilmari_প্রতিদিনের_লাইভ_ম্যাগাজিন_পাঁচ_ফোঁড়ন.png"
+import img5 from "@/assets/images/top_regular_program/radiochilmari_বিনোদনমুলক_লাইভ_অনুষ্ঠান_আনন্দ_আড্ডা.png"
+import img6 from "@/assets/images/top_regular_program/radiochilmari_বিনোদনমুলক_লাইভ_অনুষ্ঠান_আনন্দ_আড্ডা.png"
+import img7 from "@/assets/images/top_regular_program/radiochilmari_ভাওয়াইয়ার_অনুষ্ঠান_উত্তরের_সুর.png"
+import img8 from "@/assets/images/top_regular_program/radiochilmari_সুরের_মানিক.png"
 
-    "https://github.com/zbjs/radiochilmari/blob/dev/src/assets/images/top_regular_program/radiochilmari_%E0%A6%95%E0%A6%AC%E0%A6%BF%E0%A6%B0%20%E0%A6%B9%E0%A6%BE%E0%A6%9F.jpg?raw=true",
 
-    "https://github.com/zbjs/radiochilmari/blob/dev/src/assets/images/top_regular_program/radiochilmari_%E0%A6%9F%E0%A7%8B%E0%A6%A8%E0%A6%BE%20%E0%A6%9F%E0%A7%81%E0%A6%A8%E0%A6%BF%E0%A6%B0%20%E0%A6%97%E0%A6%B2%E0%A7%8D%E0%A6%AA.png?raw=true",
 
-    "https://github.com/zbjs/radiochilmari/blob/dev/src/assets/images/top_regular_program/radiochilmari_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%A4%E0%A6%BF%E0%A6%A6%E0%A6%BF%E0%A6%A8%E0%A7%87%E0%A6%B0%20%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%AD%20%E0%A6%AE%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%97%E0%A6%BE%E0%A6%9C%E0%A6%BF%E0%A6%A8%20%E2%80%98%E0%A6%AA%E0%A6%BE%E0%A6%81%E0%A6%9A%20%E0%A6%AB%E0%A7%87%E0%A6%BE%E0%A6%81%E0%A7%9C%E0%A6%A8%E2%80%99.png?raw=true",
-
-    "https://github.com/zbjs/radiochilmari/blob/dev/src/assets/images/top_regular_program/radiochilmari_%E0%A6%AC%E0%A6%BF%E0%A6%A8%E0%A7%8B%E0%A6%A6%E0%A6%A8%E0%A6%AE%E0%A7%81%E0%A6%B2%E0%A6%95%20%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%AD%20%E0%A6%85%E0%A6%A8%E0%A7%81%E0%A6%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE%E0%A6%A8%20%E2%80%98%E0%A6%86%E0%A6%A8%E0%A6%A8%E0%A7%8D%E0%A6%A6%20%E0%A6%86%E0%A6%A1%E0%A7%8D%E0%A6%A1%E0%A6%BE%E2%80%99.png?raw=true",
-
-    "https://github.com/zbjs/radiochilmari/blob/dev/src/assets/images/top_regular_program/radiochilmari_%E0%A6%AD%E0%A6%BE%E0%A6%93%E0%A7%9F%E0%A6%BE%E0%A6%87%E0%A7%9F%E0%A6%BE%E0%A6%B0%20%E0%A6%85%E0%A6%A8%E0%A7%81%E0%A6%B7%E0%A7%8D%E0%A6%A0%E0%A6%BE%E0%A6%A8%20%E2%80%98%E0%A6%89%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A7%87%E0%A6%B0%20%E0%A6%B8%E0%A7%81%E0%A6%B0%E2%80%99.png?raw=true",
+export  const imageK = [
+    {
+      id: 1,
+      image: img1
+    },
+    {
+      id: 2,
+      image: img2
+    },
+    {
+      id: 3,
+      image: img3
+    },
+    {
+      id: 4,
+      image: img4
+    },
+    {
+      id: 5,
+      image: img5
+    },
+    {
+      id: 6,
+      image: img6
+    },
+    {
+      id: 7,
+      image: img7
+    },
+    {
+      id: 8,
+      image: img8
+    },
     
-    "https://github.com/zbjs/radiochilmari/blob/dev/src/assets/images/top_regular_program/radiochilmari_%E0%A6%B8%E0%A7%81%E0%A6%B0%E0%A7%87%E0%A6%B0%20%E0%A6%AE%E0%A6%BE%E0%A6%A8%E0%A6%BF%E0%A6%95.png?raw=true"
-  ];
-
-  export default imageUrls;
+  ]

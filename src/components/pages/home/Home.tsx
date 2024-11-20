@@ -8,16 +8,18 @@ import RadioChilmariFacebookPage from '@/components/ui/FacebookPage';
 
 const Home = () => {
   return (
-    <div>
+    <div className=''>
 
-<Alert color="info">Alert!</Alert>;
+<Alert color="info">Alert!</Alert>
 
 <TopRegularProgramSlider />
 
-<FacebookVideoEmbed />
+
 
 <RadioChilmariFacebookPage />
 
+<hr className='my-4' />
+<FacebookVideoEmbed />
 
     </div>
   )
