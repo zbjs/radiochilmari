@@ -7,13 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
-   
   },
- "dependencies": {
+  "dependencies": {
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.18",
-     "next-intl": "^3.5.3"
+    "next": "14.2.18"
   },
   "devDependencies": {
     "typescript": "^5",
