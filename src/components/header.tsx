@@ -4,14 +4,14 @@ import LocalSwitcher from './local-switcher';
 
 export default function Header() {
   const t = useTranslations('Navigation');
-  const locale = useLocale(); 
+  const locale = useLocale(); // Get the active locale
 
   return (
-    <header className='p-4'>
-      <nav className='flex items-center justify-between'>
-        <Link href='/'>{t('home')}</Link>
-        <Link href={`/${useLocale()}/about`}>{t('about')}</Link>
-        <Link href={`/${useLocale()}/contact`}>{t('contact')}</Link>
+    <header className="p-4">
+      <nav className="flex items-center justify-between">
+        <Link href={`/${locale}`}>{t('home')}</Link>
+        <Link href={`/${locale}/about`}>{t('about')}</Link>
+        <Link href={`/${locale}/contact`}>{t('contact')}</Link>
         <LocalSwitcher />
       </nav>
     </header>
