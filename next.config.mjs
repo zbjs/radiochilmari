@@ -4,7 +4,18 @@ const config = {
       tailwindcss: {},
       
     },
+    output: "export",
+    experimental: {
+      appDir: true,
+    },
+    images: {
+      unoptimized: true,
+    },
     
+    i18n: {
+        locales: ['en', 'bn'],
+        defaultLocale: 'en',
+      },
   };
   
   export default config;
