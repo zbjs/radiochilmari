@@ -28,6 +28,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <head>
+      <link rel="manifest" href="/manifest.json" />
         <meta name="viewport" content={seoMetadata.viewport} />
         <meta name="description" content={seoMetadata.description} />
         <meta name="author" content={seoMetadata.author} />

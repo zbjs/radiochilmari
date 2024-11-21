@@ -33,7 +33,7 @@ const RadioChilmariFacebookPage = ({}: RadioChilmariFacebookPageProps) => {
       <div className="flex flex-col lg:flex-row items-center justify-between bg-gray-100 dark:bg-gray-900 p-6 gap-6">
         {/* Left Side: Text Content (Bangla) */}
         <div className="max-w-lg text-center lg:text-left">
-          <Image src={readio_icon} alt="Image" width={100} height={100} />
+          <Image className="mx-auto mb-4" src={readio_icon} alt="Image" width={100} height={100} />
           <h1 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold text-purple-800 dark:text-gray-100">
             {OurFacebookNewsData.title_1}
           </h1>

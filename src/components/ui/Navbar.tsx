@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import readioIcon from "@/assets/icons/readio_icon.png"
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -34,11 +35,11 @@ const Navbar = () => {
       <div className="flex-1 flex justify-center">
         <Link href="/">
           <Image
-            src="/android-chrome-192x192.png"
-            alt="Logo"
+            src={readioIcon}
+            alt="readioIcon"
             width={50}
             height={50}
-            className="object-contain"
+            className="cursor-pointer rounded-full"
           />
         </Link>
       </div>
