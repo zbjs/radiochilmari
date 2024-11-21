@@ -5,14 +5,16 @@ import RadioChilmariFacebookPage from '@/components/ui/FacebookPage';
 import HoursCard from '@/components/ui/HoursCard';
 import OurFacebookNews from '@/components/ui/OurFacebookNews';
 import RdrsProgram from '@/components/ui/RdrsProgram';
+import BackgroundHero from '@/components/ui/BackgroundHero';
 
 const Home = () => {
   return (
     <div className="bg-gray-100 dark:bg-gray-900">
 
+
       {/* Main Content */}
       <main className="p-6">
-
+      <BackgroundHero />
         {/* Slider Section */}
         <section>
           <TopRegularProgramSlider />
