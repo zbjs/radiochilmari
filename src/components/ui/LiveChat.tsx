@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect } from "react";
 
 const LiveChat = () => {
   useEffect(() => {
@@ -6,7 +6,8 @@ const LiveChat = () => {
     const loadFacebookMessenger = () => {
       // Create a script tag to load the SDK
       const script = document.createElement("script");
-      script.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+      script.src =
+        "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
       script.async = true;
       document.body.appendChild(script);
     };
@@ -19,7 +20,7 @@ const LiveChat = () => {
       <div id="fb-root"></div>
 
       {/* Facebook Messenger Chat Plugin */}
-      <div 
+      <div
         className="fb-customerchat"
         // attribution="setup_tool"
         // page_id="your-facebook-page-id"  // Replace with your Facebook Page ID
@@ -28,7 +29,7 @@ const LiveChat = () => {
         // logged_out_greeting="Goodbye! See you again soon."
       ></div>
     </>
-  )
-}
+  );
+};
 
-export default LiveChat
+export default LiveChat;

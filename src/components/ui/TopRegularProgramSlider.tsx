@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import React, { useRef, useState, useEffect } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import Image, { StaticImageData } from 'next/image';
-import { imageK } from '@/contexts/TopRegularProgramSliderData';
+import React, { useRef, useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import Image, { StaticImageData } from "next/image";
+import { imageK } from "@/contexts/TopRegularProgramSliderData";
 
 interface ImageItem {
   id: number;
@@ -13,19 +13,22 @@ interface ImageItem {
 }
 
 const TopRegularProgramSlider: React.FC = () => {
-  const [bgColor, setBgColor] = useState('bg-white');
+  const [bgColor, setBgColor] = useState("bg-white");
   const [currentSlide, setCurrentSlide] = useState(1);
   const progressCircle = useRef<SVGCircleElement>(null);
   const progressContent = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    setBgColor(currentSlide === 1 ? 'bg-white' : 'bg-gray-100');
+    setBgColor(currentSlide === 1 ? "bg-white" : "bg-gray-100");
   }, [currentSlide]);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onAutoplayTimeLeft = (swiper: any, time: number, progress: number) => {
     if (progressCircle.current) {
-      progressCircle.current.style.setProperty('--progress', 1 - progress as never);
+      progressCircle.current.style.setProperty(
+        "--progress",
+        (1 - progress) as never
+      );
     }
     if (progressContent.current) {
       progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
@@ -80,10 +83,10 @@ const TopRegularProgramSlider: React.FC = () => {
               strokeWidth="4"
               className="text-gray-300"
               style={{
-                strokeDasharray: '125.6',
+                strokeDasharray: "125.6",
                 strokeDashoffset: `calc(125.6px * (1 - var(--progress, 0)))`,
-                transform: 'rotate(-90deg)',
-                transformOrigin: 'center',
+                transform: "rotate(-90deg)",
+                transformOrigin: "center",
               }}
             />
           </svg>
@@ -94,7 +97,7 @@ const TopRegularProgramSlider: React.FC = () => {
       {/* Current Slide Indicator */}
       <div className="flex justify-center mt-4">
         <span className="text-2xl font-medium text-red-600">
-        তালিকাভুক্ত {currentSlide}
+          তালিকাভুক্ত {currentSlide}
         </span>
       </div>
     </div>

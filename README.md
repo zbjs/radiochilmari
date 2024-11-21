@@ -1,36 +1,131 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Radio Chilmari - ওয়েবসাইট
 
-First, run the development server:
+## প্রকল্পের নাম: Radio Chilmari ওয়েবসাইট
+
+এটি **Radio Chilmari** এর অফিসিয়াল ওয়েবসাইট যা আপনার রেডিও স্টেশনের সব তথ্য এবং ফিচার সরবরাহ করবে। এটি **Next.js**, **TypeScript**, এবং **Tailwind CSS** ব্যবহার করে তৈরি করা হয়েছে। এছাড়া, **Facebook Messenger Chat Widget** এর মাধ্যমে শ্রোতাদের সাথে সরাসরি যোগাযোগের সুযোগও রয়েছে।
+
+---
+
+## প্রকল্পের বিবরণ:
+
+**Radio Chilmari** বাংলাদেশের **কুড়িগ্রাম** জেলার একটি স্থানীয় রেডিও স্টেশন। এটি **RDRS Bangladesh** এর অধীনে পরিচালিত হয় এবং ২০১২ সালের ৩রা জুন অফিসিয়ালি শুরু হয়। রেডিও চিলমারির মূল উদ্দেশ্য হচ্ছে এলাকার মানুষের মধ্যে সমাজিক, অর্থনৈতিক, ও সাংস্কৃতিক উন্নয়ন ঘটানো। রেডিও স্টেশনটি কৃষক, মৎস্যজীবী, শিক্ষার্থী, নারী এবং ব্যবসায়ীদের জন্য বিভিন্ন ধরণের তথ্য এবং সহায়তা প্রদান করে।
+
+---
+
+## প্রধান বৈশিষ্ট্যসমূহ:
+
+- **ফেসবুক মেসেঞ্জার চ্যাট**: ওয়েবসাইটের মাধ্যমে শ্রোতারা সরাসরি ফেসবুক মেসেঞ্জারে যোগাযোগ করতে পারবেন।  
+- **সরাসরি সম্প্রচার**: রেডিও চিলমারি ফ্রিকোয়েন্সি 99.20 FM।
+- **বিভিন্ন ভাষায় কন্টেন্ট**: বাংলা ভাষায় কন্টেন্ট প্রদান করা হয়।
+- **স্থানীয় সম্প্রচার**: রেডিও চিলমারি কুড়িগ্রাম এবং গাইবান্ধা জেলার কিছু অঞ্চলকে কাভার করে।
+
+---
+
+## ব্যবহারকারীদের জন্য:
+
+এই ওয়েবসাইটের উদ্দেশ্য হচ্ছে স্থানীয় জনগণের জন্য একটি ইন্টারঅ্যাকটিভ এবং তথ্যপূর্ণ প্ল্যাটফর্ম তৈরি করা যেখানে তারা বিভিন্ন বিষয় সম্পর্কে জানতে পারবে, যেমন:
+
+- নারীর অধিকার
+- কৃষি বিষয়ক তথ্য
+- স্থানীয় ব্যবসায়ের পরামর্শ
+- এবং আরো অনেক কিছু
+
+---
+
+## প্রযুক্তি:
+
+এই প্রকল্পে ব্যবহৃত কিছু গুরুত্বপূর্ণ প্রযুক্তি হলো:
+
+- **Next.js** (React Framework)
+- **TypeScript** (যথাযথ টাইপিং এবং নিরাপত্তা জন্য)
+- **Tailwind CSS** (স্টাইলিং)
+- **Facebook Messenger Plugin** (শ্রোতাদের সাথে যোগাযোগের জন্য)
+
+---
+
+## ফেসবুক পেজ সংযোগ:
+
+ফেসবুক মেসেঞ্জার চ্যাট প্লাগইন ব্যবহার করার জন্য আপনার পেজ আইডি সেট করতে হবে। ফেসবুক মেসেঞ্জার চ্যাট উইজেটটি আপনার পেজের সাথে সংযুক্ত হবে এবং শ্রোতারা সহজেই যোগাযোগ করতে পারবে।
+
+নমুনা কোড:
+
+```html
+<div
+  className="fb-customerchat"
+  page_id="your-facebook-page-id"  <!-- এখানে আপনার ফেসবুক পেজ আইডি দিন -->
+  theme_color="#0084ff"
+  logged_in_greeting="Hi! How can we help you?"
+  logged_out_greeting="Goodbye! See you again soon."
+></div>
+```
+
+---
+
+## ওয়েবসাইটের কাঠামো:
+
+### `app/` ডিরেক্টরি:
+
+এখানে সমস্ত প্রধান ফিচার এবং কন্টেন্ট অবস্থিত:
+
+- **Navbar**: ওয়েবসাইটের ন্যাভিগেশন বার।
+- **Footer**: ওয়েবসাইটের ফুটার।
+- **BackgroundHero**: প্রধান ব্যাকগ্রাউন্ড ইমেজ এবং ওয়েবসাইটের হিরো সেকশন।
+
+---
+
+## অ্যাপ্লিকেশন শুরু করা:
+
+1. প্রথমে, প্রকল্পের ডিরেক্টরিতে যান।
+2. npm অথবা yarn ব্যবহার করে প্রয়োজনীয় প্যাকেজ ইনস্টল করুন:
+
+```bash
+npm install
+# অথবা
+yarn install
+```
+
+3. এরপর, অ্যাপ্লিকেশনটি চালু করুন:
 
 ```bash
 npm run dev
-# or
+# অথবা
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+এটি আপনার লোকাল হোস্টে চালু হবে।
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## রেডিও চিলমারি সম্পর্কিত তথ্য:
 
-## Learn More
+- **ঠিকানা**: RDRS Chilmari Campus, Chilmari, Kurigram
+- **ফোন**: +880171946 49 81
+- **ইমেল**: radiochilmari@gmail.com
+- **ফেসবুক পেজ**: [Radio Chilmari Facebook](https://www.facebook.com/radiochilmari)
+- **ফ্রিকোয়েন্সি**: 99.20 FM
+- **স্টার্টিং বছর**: ৩রা জুন, ২০১২
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## আপনার সহায়তা প্রয়োজন?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+আমরা সর্বদা সাহায্য করতে প্রস্তুত আছি! যদি কোনো সমস্যা থাকে অথবা আপনার কোনো প্রশ্ন থাকে, তাহলে আমাদের সাথে যোগাযোগ করুন।
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## লাইসেন্স:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+এই প্রকল্পটি একটি **MIT লাইসেন্স** এর অধীনে লাইসেন্সপ্রাপ্ত।
+
+```
+
+### কি অন্তর্ভুক্ত করা হয়েছে:
+- **প্রকল্পের বিবরণ**: রেডিও চিলমারি এবং এর ফিচার।
+- **প্রযুক্তি**: যে প্রযুক্তি গুলি ব্যবহার করা হয়েছে।
+- **Facebook Messenger Integration**: ফেসবুক পেজ আইডি কিভাবে সেট করতে হয় তার উদাহরণ।
+- **কোড উদাহরণ**: কিভাবে `fb-customerchat` কম্পোনেন্ট ব্যবহার করবেন তা দেখানো।
+- **প্রকল্প চালু করার নির্দেশিকা**: কিভাবে আপনার ওয়েবসাইটটি চলমান করতে হবে।
+- **যোগাযোগের তথ্য**: রেডিও চিলমারির ঠিকানা, ফোন নম্বর, ইমেইল এবং ফেসবুক পেজ। 
+
+এখন আপনি এই README.md ফাইলটি আপনার প্রকল্পের ডিরেক্টরিতে যোগ করতে পারেন এবং এটি আপনার রেডিও চিলমারির ওয়েবসাইট সম্পর্কে বিস্তারিত তথ্য প্রদান করবে।

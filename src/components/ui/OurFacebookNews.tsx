@@ -1,7 +1,14 @@
-'use client';
-import { AwaitedReactNode, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal } from 'react';
-import OurFacebookNewsData from '@/contexts/OurFacebookNewsData';
-import { motion } from 'framer-motion'; // Import framer-motion
+"use client";
+import {
+  AwaitedReactNode,
+  JSXElementConstructor,
+  Key,
+  ReactElement,
+  ReactNode,
+  ReactPortal,
+} from "react";
+import OurFacebookNewsData from "@/contexts/OurFacebookNewsData";
+import { motion } from "framer-motion"; // Import framer-motion
 
 const OurFacebookNews = () => {
   return (
@@ -18,16 +25,31 @@ const OurFacebookNews = () => {
           {OurFacebookNewsData.programs[0].type}
         </h2>
         <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mt-4 font-bengali">
-          {OurFacebookNewsData.programs[0].details.map((detail: string | number | bigint | boolean | ReactElement<never, string | JSXElementConstructor<unknown>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined, index: Key | null | undefined) => (
-            <motion.li
-              key={index}
-              className="text-gray-700 dark:text-gray-400 hover:bg-red-200 dark:hover:bg-red-800 p-2 rounded-lg"
-              whileHover={{ scale: 1.05 }} // Animation on hover
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              {detail}
-            </motion.li>
-          ))}
+          {OurFacebookNewsData.programs[0].details.map(
+            (
+              detail:
+                | string
+                | number
+                | bigint
+                | boolean
+                | ReactElement<never, string | JSXElementConstructor<unknown>>
+                | Iterable<ReactNode>
+                | ReactPortal
+                | Promise<AwaitedReactNode>
+                | null
+                | undefined,
+              index: Key | null | undefined
+            ) => (
+              <motion.li
+                key={index}
+                className="text-gray-700 dark:text-gray-400 hover:bg-red-200 dark:hover:bg-red-800 p-2 rounded-lg"
+                whileHover={{ scale: 1.05 }} // Animation on hover
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                {detail}
+              </motion.li>
+            )
+          )}
         </ul>
         <h2 className="text-2xl font-semibold mt-6 text-purple-600 dark:text-purple-400 font-bengali">
           {OurFacebookNewsData.programs[1].type}
@@ -39,16 +61,31 @@ const OurFacebookNews = () => {
           আমাদের ফেইসবুক পেজে কেন যুক্ত হবেন?
         </h2>
         <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mt-4 font-bengali">
-          {OurFacebookNewsData.facebookPageReasons.map((reason: string | number | bigint | boolean | ReactElement<never, string | JSXElementConstructor<unknown>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined, index: Key | null | undefined) => (
-            <motion.li
-              key={index}
-              className="text-gray-700 dark:text-gray-400 hover:bg-red-200 dark:hover:bg-red-800 p-2 rounded-lg"
-              whileHover={{ scale: 1.05 }} // Animation on hover
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              {reason}
-            </motion.li>
-          ))}
+          {OurFacebookNewsData.facebookPageReasons.map(
+            (
+              reason:
+                | string
+                | number
+                | bigint
+                | boolean
+                | ReactElement<never, string | JSXElementConstructor<unknown>>
+                | Iterable<ReactNode>
+                | ReactPortal
+                | Promise<AwaitedReactNode>
+                | null
+                | undefined,
+              index: Key | null | undefined
+            ) => (
+              <motion.li
+                key={index}
+                className="text-gray-700 dark:text-gray-400 hover:bg-red-200 dark:hover:bg-red-800 p-2 rounded-lg"
+                whileHover={{ scale: 1.05 }} // Animation on hover
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                {reason}
+              </motion.li>
+            )
+          )}
         </ul>
         <h2 className="text-2xl font-semibold mt-6 text-purple-600 dark:text-purple-400 font-bengali">
           চোখ রাখুন Radio Chilmary-তে!

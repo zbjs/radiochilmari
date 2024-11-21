@@ -1,8 +1,8 @@
-'use client';
+"use client";
 import React, { useEffect, useState } from "react";
 import moment from "moment";
 import "moment/locale/bn"; // Import Bangla locale
-import { motion } from 'framer-motion'; // Import framer-motion
+import { motion } from "framer-motion"; // Import framer-motion
 
 moment.locale("bn"); // Set moment to Bangla locale
 
@@ -54,8 +54,13 @@ const HoursCard: React.FC = () => {
 
   // Assign a background color to each day
   const dayColors = [
-    "bg-blue-100", "bg-green-100", "bg-yellow-100", 
-    "bg-red-100", "bg-purple-100", "bg-pink-100", "bg-indigo-100"
+    "bg-blue-100",
+    "bg-green-100",
+    "bg-yellow-100",
+    "bg-red-100",
+    "bg-purple-100",
+    "bg-pink-100",
+    "bg-indigo-100",
   ];
 
   return (
@@ -77,7 +82,7 @@ const HoursCard: React.FC = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <span className="font-medium ">{hour.day}</span>
-              <span className="font-medium" >{hour.time}</span>
+              <span className="font-medium">{hour.time}</span>
             </motion.li>
           ))}
         </ul>

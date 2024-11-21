@@ -1,8 +1,8 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+"use client";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -17,13 +17,15 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <motion.div
-      className={`fixed top-0 w-full flex items-center justify-between h-16 px-4 bg-gray-200 text-white shadow-md z-50 ${scrolling ? 'bg-opacity-80 backdrop-blur-md' : 'bg-opacity-100'}`}
+      className={`fixed top-0 w-full flex items-center justify-between h-16 px-4 bg-gray-200 text-white shadow-md z-50 ${
+        scrolling ? "bg-opacity-80 backdrop-blur-md" : "bg-opacity-100"
+      }`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}

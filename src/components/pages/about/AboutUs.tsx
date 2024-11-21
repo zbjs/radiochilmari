@@ -1,11 +1,18 @@
-'use client'
+"use client";
 import React from "react";
 import { aboutUsData } from "@/contexts/aboutUsData";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 const AboutUs: React.FC = () => {
-  const { title, address, contact, broadcast, description, audienceAndCoverage } = aboutUsData;
+  const {
+    title,
+    address,
+    contact,
+    broadcast,
+    description,
+    audienceAndCoverage,
+  } = aboutUsData;
 
   return (
     <div className="flex mt-14 flex-col items-center justify-center min-h-screen p-4">
@@ -30,7 +37,9 @@ const AboutUs: React.FC = () => {
             ঠিকানা:
           </motion.h2>
           {address.map((line, index) => (
-            <p key={index} className="text-gray-700">{line}</p>
+            <p key={index} className="text-gray-700">
+              {line}
+            </p>
           ))}
         </div>
 
@@ -44,16 +53,25 @@ const AboutUs: React.FC = () => {
           >
             যোগাযোগ:
           </motion.h2>
-          <p><strong className="text-purple-500">ফোন:</strong> {contact.phone.join(", ")}</p>
+          <p>
+            <strong className="text-purple-500">ফোন:</strong>{" "}
+            {contact.phone.join(", ")}
+          </p>
           <p>
             <strong className="text-purple-500">ইমেল:</strong>{" "}
-            <Link href={`mailto:${contact.email}`} className="text-blue-600 underline hover:text-blue-800">
+            <Link
+              href={`mailto:${contact.email}`}
+              className="text-blue-600 underline hover:text-blue-800"
+            >
               {contact.email}
             </Link>
           </p>
           <p>
             <strong className="text-purple-500">ফেসবুক:</strong>{" "}
-            <Link href="https://www.facebook.com/radiochilmari" className="text-blue-600 underline hover:text-blue-800">
+            <Link
+              href="https://www.facebook.com/radiochilmari"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
               {contact.facebook}
             </Link>
           </p>
@@ -69,14 +87,27 @@ const AboutUs: React.FC = () => {
           >
             সম্প্রচার বিবরণ:
           </motion.h2>
-          <p><strong className="text-purple-500">ফ্রিকোয়েন্সি:</strong> {broadcast.frequency}</p>
           <p>
-            <strong className="text-purple-500">শুরুর বছর:</strong> পরীক্ষামূলক: {broadcast.yearStarted.test}, 
-            আনুষ্ঠানিক: {broadcast.yearStarted.official}
+            <strong className="text-purple-500">ফ্রিকোয়েন্সি:</strong>{" "}
+            {broadcast.frequency}
           </p>
-          <p><strong className="text-purple-500">দেশ:</strong> {broadcast.country}</p>
-          <p><strong className="text-purple-500">মালিকানা:</strong> {broadcast.ownership}</p>
-          <p><strong className="text-purple-500">মালিক:</strong> {broadcast.owner}</p>
+          <p>
+            <strong className="text-purple-500">শুরুর বছর:</strong> পরীক্ষামূলক:{" "}
+            {broadcast.yearStarted.test}, আনুষ্ঠানিক:{" "}
+            {broadcast.yearStarted.official}
+          </p>
+          <p>
+            <strong className="text-purple-500">দেশ:</strong>{" "}
+            {broadcast.country}
+          </p>
+          <p>
+            <strong className="text-purple-500">মালিকানা:</strong>{" "}
+            {broadcast.ownership}
+          </p>
+          <p>
+            <strong className="text-purple-500">মালিক:</strong>{" "}
+            {broadcast.owner}
+          </p>
         </div>
 
         {/* Description Section */}
@@ -102,14 +133,26 @@ const AboutUs: React.FC = () => {
           >
             শ্রোতা ও কভারেজ:
           </motion.h2>
-          <p><strong className="text-purple-500">শ্রোতার ধরন:</strong> {audienceAndCoverage.audience.join(", ")}</p>
-          <p><strong className="text-purple-500">ভাষা:</strong> {audienceAndCoverage.languages}</p>
+          <p>
+            <strong className="text-purple-500">শ্রোতার ধরন:</strong>{" "}
+            {audienceAndCoverage.audience.join(", ")}
+          </p>
+          <p>
+            <strong className="text-purple-500">ভাষা:</strong>{" "}
+            {audienceAndCoverage.languages}
+          </p>
           <p>
             <strong className="text-purple-500">কভারেজ এলাকাসমূহ:</strong>{" "}
             {audienceAndCoverage.coverage.join(", ")}
           </p>
-          <p><strong className="text-purple-500">বিষয়বস্তু:</strong> {audienceAndCoverage.contentType}</p>
-          <p><strong className="text-purple-500">কভারেজ ধরণ:</strong> {audienceAndCoverage.coverageType}</p>
+          <p>
+            <strong className="text-purple-500">বিষয়বস্তু:</strong>{" "}
+            {audienceAndCoverage.contentType}
+          </p>
+          <p>
+            <strong className="text-purple-500">কভারেজ ধরণ:</strong>{" "}
+            {audienceAndCoverage.coverageType}
+          </p>
         </div>
       </div>
     </div>
@@ -117,4 +160,3 @@ const AboutUs: React.FC = () => {
 };
 
 export default AboutUs;
-
