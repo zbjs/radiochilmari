@@ -50,7 +50,7 @@ export default function RdrsProgram() {
 
   return (
     <div className="slider-container">
-<div className='text-center text-2xl font-bold mb-4 text-purple-600'>
+<div className='p-2 text-sm sm:text-sm md:text-xl lg:text-2xl font-bold mb-4 text-purple-600'>
 নারীর অধিকার এবং নারী ও শিশু সম্পর্কিত প্রোগ্রামগুলি সচেতনতা সৃষ্টি, তথ্য প্রদান এবং সমাজে ইতিবাচক পরিবর্তন আনার জন্য প্রচারিত হয়। এসব প্রোগ্রামে নারীদের আইনি অধিকার, গার্হস্থ্য সহিংসতা, শিশুদের শিক্ষা ও সুরক্ষা, স্বাস্থ্য সচেতনতা, এবং নারী উদ্যোক্তাদের সাফল্য তুলে ধরা হয়। এছাড়া, শিশু শ্রম, পাচার ও নির্যাতন রোধে সচেতনতা তৈরি করা হয়, যা নারী ও শিশুদের নিরাপত্তা এবং সমান অধিকার নিশ্চিত করতে সহায়ক।
 </div>
       <Slider {...settings}>

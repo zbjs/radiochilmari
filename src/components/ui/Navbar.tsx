@@ -57,7 +57,7 @@ const Navbar = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.4 }}
         >
-          <Link href="/our-show">আমাদের শো</Link>
+          <Link href="/our-show">আমাদের অনুষ্ঠান সমূহ</Link>
         </motion.div>
         <motion.div
           className="hover:underline"

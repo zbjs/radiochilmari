@@ -28,7 +28,7 @@ const RadioChilmariFacebookPage = ({
   }, []);
   return (
    <div className='my-8 text-center'>
-<span className='text-5xl  text-blue-600 dark:text-gray-100 text-center font-extrabold'>
+<span className='text-sm sm:text-lg md:text-xl lg:text-xl  text-blue-600 dark:text-gray-100 text-center font-extrabold'>
 আমাদের অফিসিয়াল ফেসবুক পেজ l
 </span>
      <div className="flex flex-col lg:flex-row items-center justify-between bg-gray-100 dark:bg-gray-900 p-6 gap-6">
@@ -36,7 +36,7 @@ const RadioChilmariFacebookPage = ({
       {/* Left Side: Text Content (Bangla) */}
       <div className="max-w-lg text-center lg:text-left">
         <Image src={readio_icon} alt="Image" width={100} height={100} />
-        <h1 className="text-3xl font-bold text-purple-800 dark:text-gray-100">
+        <h1 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold text-purple-800 dark:text-gray-100">
           {OurFacebookNewsData.title_1}
         </h1>
         <p className="mt-4 text-gray-900 dark:text-gray-300">

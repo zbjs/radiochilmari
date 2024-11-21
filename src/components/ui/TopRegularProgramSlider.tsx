@@ -36,7 +36,7 @@ const TopRegularProgramSlider: React.FC = () => {
     <div className={`relative ${bgColor} py-8 px-4 mt-10`}>
       {/* Header */}
       <div className="text-center mb-6">
-        <h1 className="text-7xl font-bold text-purple-500">
+        <h1 className="text-sm sm:text-lg md:text-2xl lg:text-5xl font-bold text-purple-500">
           নিয়মিত প্রোগ্রাম সমূহ
         </h1>
         <hr className="my-4 border-t-2 border-gray-300" />

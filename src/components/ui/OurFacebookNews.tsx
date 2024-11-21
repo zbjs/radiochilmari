@@ -35,7 +35,7 @@ const OurFacebookNews = () => {
         <p className="mt-2 text-gray-600 dark:text-gray-300 font-bengali">
           {OurFacebookNewsData.programs[1].details}
         </p>
-        <h2 className="text-2xl font-semibold mt-6 text-red-600 dark:text-red-400 font-bengali">
+        <h2 className="text-sm sm:text-lg md:text-2xl lg:text-5xl font-semibold mt-6 text-red-600 dark:text-red-400 font-bengali">
           আমাদের ফেইসবুক পেজে কেন যুক্ত হবেন?
         </h2>
         <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mt-4 font-bengali">
