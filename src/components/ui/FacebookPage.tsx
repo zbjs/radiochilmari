@@ -1,8 +1,19 @@
 'use client';
 
 import { useEffect } from 'react';
+import OurFacebookNewsData from '@/contexts/OurFacebookNewsData';
+import readio_icon from '@/assets/icons/readio_icon.png';
+import Image from 'next/image';
 
-const RadioChilmariFacebookPage = () => {
+interface RadioChilmariFacebookPageProps {
+  pageHref: string;
+  width?: number | string;
+  height?: number | string;
+}
+
+const RadioChilmariFacebookPage = ({
+ 
+}: RadioChilmariFacebookPageProps) => {
   useEffect(() => {
     // Load the Facebook SDK
     if (!document.getElementById('facebook-jssdk')) {
@@ -15,19 +26,23 @@ const RadioChilmariFacebookPage = () => {
       document.body.appendChild(script);
     }
   }, []);
-
   return (
-    <div className="flex items-center justify-between h-screen bg-gray-100 dark:bg-gray-900 p-6">
-      {/* Left Side: Text Content */}
-      <div className="max-w-lg">
-        <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-100">
-          Our Facebook Page
+   <div className='my-8 text-center'>
+<span className='text-5xl  text-blue-600 dark:text-gray-100 text-center font-extrabold'>
+আমাদের অফিসিয়াল ফেসবুক পেজ l
+</span>
+     <div className="flex flex-col lg:flex-row items-center justify-between bg-gray-100 dark:bg-gray-900 p-6 gap-6">
+      
+      {/* Left Side: Text Content (Bangla) */}
+      <div className="max-w-lg text-center lg:text-left">
+        <Image src={readio_icon} alt="Image" width={100} height={100} />
+        <h1 className="text-3xl font-bold text-purple-800 dark:text-gray-100">
+          {OurFacebookNewsData.title_1}
         </h1>
-        <p className="mt-4 text-gray-600 dark:text-gray-300">
-          Stay updated all the time! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Perspiciatis incidunt velit asperiores voluptate necessitatibus voluptates harum tempora atque quo. 
-          Saepe vitae ad dicta neque voluptatibus ut officiis ducimus perspiciatis eos?
+        <p className="mt-4 text-gray-900 dark:text-gray-300">
+          {OurFacebookNewsData.description}
         </p>
+        
       </div>
 
       {/* Right Side: Facebook Page Embed */}
@@ -54,6 +69,7 @@ const RadioChilmariFacebookPage = () => {
         </div>
       </div>
     </div>
+   </div>
   );
 };
 

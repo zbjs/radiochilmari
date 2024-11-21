@@ -15,6 +15,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        bengali: ['"Noto Sans Bengali"', 'sans-serif'], // Replace with your preferred font
+      },
     },
   },
   plugins: [

@@ -33,12 +33,13 @@ const TopRegularProgramSlider: React.FC = () => {
   };
 
   return (
-    <div className={`relative ${bgColor} py-8 px-4`}>
+    <div className={`relative ${bgColor} py-8 px-4 mt-10`}>
       {/* Header */}
       <div className="text-center mb-6">
-        <h1 className="text-3xl font-bold text-gray-800">
+        <h1 className="text-7xl font-bold text-purple-500">
           নিয়মিত প্রোগ্রাম সমূহ
         </h1>
+        <hr className="my-4 border-t-2 border-gray-300" />
       </div>
 
       {/* Swiper Slider */}
@@ -92,8 +93,8 @@ const TopRegularProgramSlider: React.FC = () => {
 
       {/* Current Slide Indicator */}
       <div className="flex justify-center mt-4">
-        <span className="text-lg font-medium text-gray-600">
-          Item {currentSlide}
+        <span className="text-2xl font-medium text-red-600">
+        তালিকাভুক্ত {currentSlide}
         </span>
       </div>
     </div>
