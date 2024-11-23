@@ -18,7 +18,7 @@ const CurrentTimeInBangla = () => {
 
   return (
     <div className="flex justify-center items-center ">
-      <p className="text-sm sm:text-xl md:text-xl lg:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-600 shadow-xl">
+      <p className="text-xs sm:text-sm md:text-xl lg:text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-600 shadow-xl">
       আজ {currentTime}
       </p>
     </div>
