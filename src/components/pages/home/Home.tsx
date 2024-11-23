@@ -3,12 +3,14 @@ import TopRegularProgramSlider from "@/components/ui/TopRegularProgramSlider";
 import FacebookVideoEmbed from "@/components/ui/FacebookVideoEmbed";
 import RadioChilmariFacebookPage from "@/components/ui/FacebookPage";
 import HoursCard from "@/components/ui/HoursCard";
-import OurFacebookNews from "@/components/ui/OurFacebookNews";
+// import OurFacebookNews from "@/components/ui/OurFacebookNews";
 import RdrsProgram from "@/components/ui/RdrsProgram";
 import BackgroundHero from "@/components/ui/BackgroundHero";
 import Award from "@/components/ui/Award";
 import Testimonials from "@/components/ui/Testimonials";
 import RadioPlayer from "@/components/ui/RadioPlayer";
+import RadioChilmariFeatures from "@/components/ui/RadioChilmariFeatures";
+import InvestmentSection from "@/components/ui/InvestmentSection";
 
 const Home = () => {
   return (
@@ -43,12 +45,14 @@ const Home = () => {
         </section>
         <Testimonials />
         <section>
+
+      <RadioChilmariFeatures />
         <Award />
         </section>
 
-
         {/* Video Embed Section */}
         <section className="my-8">
+          <InvestmentSection />
           <FacebookVideoEmbed />
         </section>
       </main>

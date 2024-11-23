@@ -63,7 +63,7 @@ const RadioPlayer: React.FC = () => {
 
     return (
         <div className="mt-6 sm:mt-10 relative z-10 rounded-xl shadow-xl">
-            <div className="bg-white border-slate-100 transition-all duration-500 dark:bg-slate-800 transition-all duration-500 dark:border-slate-500 border-b rounded-t-xl p-4 pb-6 sm:p-10 sm:pb-8 lg:p-6 xl:p-10 xl:pb-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8">
+            <div className="bg-white border-slate-100 transition-all duration-500 dark:bg-slate-800  dark:border-slate-500 border-b rounded-t-xl p-4 pb-6 sm:p-10 sm:pb-8 lg:p-6 xl:p-10 xl:pb-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8">
                 <div className="flex items-center space-x-4">
                     <Image
                         src={ReadioChilmaryLogo}
@@ -79,10 +79,10 @@ const RadioPlayer: React.FC = () => {
                             <abbr title="সম্প্রচার">99.</abbr> 2
                         </p>
                         <h2 className="text-slate-500 transition-all duration-500 dark:text-slate-400 text-sm leading-6 truncate">
-                        রেডিও চিলমারী
+                            রেডিও চিলমারী
                         </h2>
-                        <p className="text-slate-900 transition-all duration-500 dark:text-slate-50 text-lg">
-                        শোনো বাহে, জাগো বাহে 
+                        <p className="text-slate-900 transition-all duration-500 dark:text-slate-50 text-sm">
+                            শোনো বাহে, জাগো বাহে
                         </p>
                     </div>
                 </div>
@@ -109,7 +109,7 @@ const RadioPlayer: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-slate-50 text-slate-500 transition-all duration-500 dark:bg-slate-600 transition-all duration-500 dark:text-slate-200 rounded-b-xl flex items-center">
+            <div className="bg-slate-50 text-slate-500 transition-all duration-500 dark:bg-slate-600  dark:text-slate-200 rounded-b-xl flex items-center">
                 <div className="flex-auto flex items-center justify-evenly">
                     <button type="button" aria-label="Add to favorites">
                         <svg width="24" height="24">
@@ -126,7 +126,7 @@ const RadioPlayer: React.FC = () => {
                 </div>
                 <button
                     type="button"
-                    className="bg-white text-slate-900 transition-all duration-500 dark:bg-slate-100 transition-all duration-500 dark:text-slate-700 flex-none -my-2 mx-auto w-20 h-20 rounded-full ring-1 ring-slate-900/5 shadow-md flex items-center justify-center"
+                    className="bg-white text-slate-900 transition-all duration-500 dark:bg-slate-100  dark:text-slate-700 flex-none -my-2 mx-auto w-20 h-20 rounded-full ring-1 ring-slate-900/5 shadow-md flex items-center justify-center"
                     aria-label={isPlaying ? "Pause" : "Play"}
                     onClick={togglePlayPause}
                 >

@@ -3,10 +3,12 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import readioIcon from "@/assets/icons/readio_icon.png"
+import { FaBars, FaTimes } from "react-icons/fa";
+import readioIcon from "@/assets/icons/readio_icon.png";
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Detect scrolling and apply blur effect
   useEffect(() => {
@@ -31,12 +33,12 @@ const Navbar = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      {/* Centered Logo */}
-      <div className="flex-1 flex justify-center">
+      {/* Left: Logo */}
+      <div className="flex items-center">
         <Link href="/">
           <Image
             src={readioIcon}
-            alt="readioIcon"
+            alt="Radio Icon"
             width={50}
             height={50}
             className="cursor-pointer rounded-full"
@@ -44,8 +46,8 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* Right Side Links */}
-      <div className="flex space-x-6 text-black font-bold font-bengali text-sm md:text-xl lg-text-2xl">
+      {/* Center: Navigation Links (Desktop View) */}
+      <div className="hidden md:flex space-x-6 text-black font-bold font-bengali text-sm md:text-lg lg:text-xl">
         <motion.div
           className="hover:underline"
           initial={{ opacity: 0 }}
@@ -71,6 +73,39 @@ const Navbar = () => {
           <Link href="/contact-us">যোগাযোগ করুন</Link>
         </motion.div>
       </div>
+
+      {/* Right: Hamburger Menu (Mobile View) */}
+      <div className="md:hidden flex items-center">
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="text-black focus:outline-none"
+        >
+          {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <motion.div
+          className="absolute top-16 left-0 w-full bg-gray-200 dark:bg-gray-900 text-black dark:text-white shadow-md z-40"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.3 }}
+        >
+          <div className="flex flex-col items-center space-y-4 py-4 font-bold font-bengali text-lg">
+            <Link href="/about-us" onClick={() => setIsMenuOpen(false)}>
+              আমাদের সম্পর্কে
+            </Link>
+            <Link href="/our-show" onClick={() => setIsMenuOpen(false)}>
+              আমাদের অনুষ্ঠান সমূহ
+            </Link>
+            <Link href="/contact-us" onClick={() => setIsMenuOpen(false)}>
+              যোগাযোগ করুন
+            </Link>
+          </div>
+        </motion.div>
+      )}
     </motion.div>
   );
 };

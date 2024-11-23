@@ -13,18 +13,12 @@ type AwardImage = StaticImport;
 
 // React component
 const Award: React.FC = () => {
-  // Slick carousel settings
+  
   const settings = {
-    className: "center",
     infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 5,
-    swipeToSlide: true,
-    afterChange: function(index: number) {
-      console.log(
-        `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-      );
-    }
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3
   };
 
   return (

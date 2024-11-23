@@ -27,7 +27,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      
       <link rel="manifest" href="/manifest.json" />
         <meta name="viewport" content={seoMetadata.viewport} />
         <meta name="description" content={seoMetadata.description} />
@@ -45,7 +45,7 @@ export default async function RootLayout({
         <meta name="twitter:title" content={seoMetadata.twitter.title} />
         <meta name="twitter:description" content={seoMetadata.twitter.description} />
         <meta name="twitter:image" content={seoMetadata.twitter.image} />
-      </head>
+  
       <body className={inter.className}>
         <Navbar />
         <div className="font-bengali flex flex-col min-h-screen">
