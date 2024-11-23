@@ -1,23 +1,25 @@
 import React from "react";
-import BackgroundHeroImages from "@/assets/images/radiochilmar_bg-logo.jpg";
 import Image from "next/image";
+import BackgroundHeroImages from "@/assets/images/radiochilmar_bg-logo.jpg";
 
 const BackgroundHero = () => {
   return (
-    <div className="relative mt-20 w-full">
+    <div className="relative w-full h-[50vh] lg:h-[70vh] mt-20">
+      {/* Background Image */}
       <Image
         src={BackgroundHeroImages}
-        alt="Background Image"
-        className="object-cover object-center w-full h-full"
+        alt="Radio Chilmari Background"
+        className="object-cover w-full h-full"
+        priority
       />
 
-      {/* Background overlay */}
+      {/* Background Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      {/* Content
-      <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold">Hello, World!</h1>
-        <p className="text-lg md:text-xl text-white mt-4">This is a text</p>
+      {/* Optional Content */}
+      {/* <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+        <h1 className="text-4xl md:text-5xl font-bold">Welcome to Radio Chilmari</h1>
+        <p className="mt-4 text-lg md:text-xl">Connecting hearts through radio</p>
       </div> */}
     </div>
   );

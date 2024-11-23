@@ -48,8 +48,8 @@ export default async function RootLayout({
       </head>
       <body className={inter.className}>
         <Navbar />
-        <div className="flex-grow container mx-auto px-4 pt-20 font-bengali">
-          {children}
+        <div className="font-bengali flex flex-col min-h-screen">
+          <div className="flex-1">{children}</div>
         </div>
         <Footer />
       </body>

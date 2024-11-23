@@ -64,8 +64,9 @@ const HoursCard: React.FC = () => {
   ];
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="w-full max-w-screen-lg bg-white shadow-lg rounded-lg p-6">
+   <div className="container m-auto">
+     <div className="justify-center items-center bg-gray-100">
+      <div className="">
         <h2 className="text-2xl font-bold text-center text-green-600 mb-4">
           অনুষ্ঠানের সময়সূচি
         </h2>
@@ -88,6 +89,7 @@ const HoursCard: React.FC = () => {
         </ul>
       </div>
     </div>
+   </div>
   );
 };
 

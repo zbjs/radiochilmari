@@ -6,40 +6,54 @@ import HoursCard from "@/components/ui/HoursCard";
 import OurFacebookNews from "@/components/ui/OurFacebookNews";
 import RdrsProgram from "@/components/ui/RdrsProgram";
 import BackgroundHero from "@/components/ui/BackgroundHero";
+import Award from "@/components/ui/Award";
+import Testimonials from "@/components/ui/Testimonials";
+import RadioPlayer from "@/components/ui/RadioPlayer";
 
 const Home = () => {
   return (
     <div className="bg-gray-100 dark:bg-gray-900">
       {/* Main Content */}
       <main className="p-6">
+        {/* Background Hero Section */}
         <BackgroundHero />
+
+    <RadioPlayer />
+
         {/* Slider Section */}
-        <section>
+        <section className="my-8">
           <TopRegularProgramSlider />
         </section>
 
         {/* Facebook Page Section */}
         <section className="my-8">
-          <RadioChilmariFacebookPage pageHref={""} />
+          <RadioChilmariFacebookPage pageHref="https://www.facebook.com/radiochilmari" />
         </section>
+        <hr className="" />
 
-        {/* Facebook News Section */}
-        <section className="my-8">
-          <OurFacebookNews />
-        </section>
 
         {/* Hours Card Section */}
         <section className="my-8">
           <HoursCard />
         </section>
 
-        <RdrsProgram />
+        {/* RDRS Program Section */}
+        <section className="my-8">
+          <RdrsProgram />
+        </section>
+        <Testimonials />
+        <section>
+        <Award />
+        </section>
+
+
         {/* Video Embed Section */}
         <section className="my-8">
-          {/* Uncomment if needed */}
           <FacebookVideoEmbed />
         </section>
       </main>
+
+    
     </div>
   );
 };

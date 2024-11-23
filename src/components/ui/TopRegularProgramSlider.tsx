@@ -94,12 +94,7 @@ const TopRegularProgramSlider: React.FC = () => {
         </div>
       </Swiper>
 
-      {/* Current Slide Indicator */}
-      <div className="flex justify-center mt-4">
-        <span className="text-2xl font-medium text-red-600">
-          তালিকাভুক্ত {currentSlide}
-        </span>
-      </div>
+     
     </div>
   );
 };
