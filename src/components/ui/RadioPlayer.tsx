@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import ReadioChilmaryLogo from '@/assets/icons/readio_icon.png';
 import Image from 'next/image';
-import { FaPlay, FaPause, FaHeart, FaVolumeUp } from 'react-icons/fa';
+import { FaPlay, FaPause, FaHeart } from 'react-icons/fa';
 
 const RadioPlayer: React.FC = () => {
     const [playbackSpeed, setPlaybackSpeed] = useState('1x');
