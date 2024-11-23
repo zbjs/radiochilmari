@@ -28,8 +28,8 @@ const FacebookVideoEmbed: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 p-4">
-      <div className="max-w-screen-xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4">
+    <div className="bg-gray-100 dark:bg-gray-900">
+      <div className="max-w-screen-xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg p-2">
       
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 sm:gap-1 md:gap-2 lg:gap-4">
           {videoData.map((video, index) => (

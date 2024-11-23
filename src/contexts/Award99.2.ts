@@ -14,6 +14,7 @@ import ima13 from '@/assets/images/aw/13.png'
 import ima14 from '@/assets/images/aw/14.png'
 import ima15 from '@/assets/images/aw/15.png'
 import ima16 from '@/assets/images/aw/16.png'
+import ima17 from '@/assets/images/aw/17.png'
 
 
 // Define the image types
@@ -21,5 +22,5 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 // Array of imported images
 export const AwardImages: StaticImport[] = [
-  ima1, ima2, ima3, ima4, ima5, ima6, ima7, ima8, ima9, ima10, ima11, ima12, ima13, ima14, ima15, ima16
+  ima1, ima2, ima3, ima4, ima5, ima6, ima7, ima8, ima9, ima10, ima11, ima12, ima13, ima14, ima15, ima16, ima17
 ];

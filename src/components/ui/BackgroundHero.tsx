@@ -4,7 +4,7 @@ import BackgroundHeroImages from "@/assets/images/radiochilmar_bg-logo.jpg";
 
 const BackgroundHero = () => {
   return (
-    <div className="relative w-full h-[50vh] lg:h-[70vh] mt-20">
+    <div className="relative mt-20">
       {/* Background Image */}
       <Image
         src={BackgroundHeroImages}

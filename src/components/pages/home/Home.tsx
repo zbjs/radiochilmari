@@ -1,4 +1,3 @@
-import React from "react";
 import TopRegularProgramSlider from "@/components/ui/TopRegularProgramSlider";
 import FacebookVideoEmbed from "@/components/ui/FacebookVideoEmbed";
 import RadioChilmariFacebookPage from "@/components/ui/FacebookPage";
@@ -11,6 +10,7 @@ import Testimonials from "@/components/ui/Testimonials";
 import RadioPlayer from "@/components/ui/RadioPlayer";
 import RadioChilmariFeatures from "@/components/ui/RadioChilmariFeatures";
 import InvestmentSection from "@/components/ui/InvestmentSection";
+import CookieConsent from "@/components/ui/CookieConsent";
 
 const Home = () => {
   return (
@@ -20,7 +20,7 @@ const Home = () => {
         {/* Background Hero Section */}
         <BackgroundHero />
 
-    <RadioPlayer />
+        <RadioPlayer />
 
         {/* Slider Section */}
         <section className="my-8">
@@ -46,8 +46,8 @@ const Home = () => {
         <Testimonials />
         <section>
 
-      <RadioChilmariFeatures />
-        <Award />
+          <RadioChilmariFeatures />
+          <Award />
         </section>
 
         {/* Video Embed Section */}
@@ -55,9 +55,10 @@ const Home = () => {
           <InvestmentSection />
           <FacebookVideoEmbed />
         </section>
+        <CookieConsent />
       </main>
 
-    
+
     </div>
   );
 };

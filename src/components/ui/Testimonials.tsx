@@ -1,6 +1,5 @@
 import React from 'react';
 import testimonialsData from '@/contexts/testimonialsData';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const Testimonials = () => {
@@ -32,11 +31,13 @@ const Testimonials = () => {
                 <Link href={testimonial.link} className="cursor-pointer">
                   <div className="relative p-6 space-y-6 leading-none rounded-lg bg-indigo-300 ring-1 ring-blue-300">
                     <div className="flex items-center space-x-4">
-                      <Image
+                      <picture>
+                      <img
                         src={testimonial.image}
                         alt={testimonial.name}
                         className="w-12 h-12 bg-center bg-cover border rounded-full"
                       />
+                      </picture>
                       <div>
                         <h3 className="text-lg font-semibold text-gray-800">{testimonial.name}</h3>
                         <p className="text-gray-900 text-md">{testimonial.role}</p>

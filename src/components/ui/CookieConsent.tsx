@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from "react";
 
 const CookieConsent: React.FC = () => {
@@ -11,13 +12,6 @@ const CookieConsent: React.FC = () => {
     setIsVisible(false); // Hide the cookie consent popup
   };
 
-  // Check if the user has already accepted cookies
-  const hasAcceptedCookies = localStorage.getItem("cookieConsent");
-
-  // If cookies are accepted, don't show the banner
-  if (hasAcceptedCookies) {
-    return null;
-  }
 
   return (
     <div
@@ -28,14 +22,14 @@ const CookieConsent: React.FC = () => {
     >
       <div className="flex items-center justify-between gap-6 text-sm">
         <div className="content-left pl-4 dark:text-white">
-          This website uses cookies to improve your web experience.
+        এই ওয়েবসাইটটি আপনার ওয়েব অভিজ্ঞতা উন্নত করতে কুকিজ ব্যবহার করে।
         </div>
         <div className="content-right text-end">
           <button
             onClick={handleAccept}
             className="cursor-pointer rounded-full bg-black dark:bg-gray-600 px-4 py-2 text-white"
           >
-            Accept
+            গ্রহণ করুন
           </button>
         </div>
       </div>
