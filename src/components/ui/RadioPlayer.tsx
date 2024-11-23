@@ -76,7 +76,7 @@ const RadioPlayer: React.FC = () => {
                     />
                     <div className="min-w-0 flex-auto space-y-1 font-semibold">
                         <p className="text-cyan-500 transition-all duration-500 dark:text-cyan-400 text-sm leading-6">
-                            <abbr title="সম্প্রচার">99.</abbr> 2
+                            <abbr title="সম্প্রচার">৯৯.</abbr> ২
                         </p>
                         <h2 className="text-slate-500 transition-all duration-500 dark:text-slate-400 text-sm leading-6 truncate">
                             রেডিও চিলমারী

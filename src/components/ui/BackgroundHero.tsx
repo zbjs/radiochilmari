@@ -9,7 +9,7 @@ const BackgroundHero = () => {
       <Image
         src={BackgroundHeroImages}
         alt="Radio Chilmari Background"
-        className="object-cover w-full h-full"
+        className="object-cover"
         priority
       />
 
