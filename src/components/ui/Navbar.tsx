@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
 import readioIcon from "@/assets/icons/readio_icon.png";
+import CurrentTimeInBangla from "./CurrentTimeInBangla";
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -45,6 +46,8 @@ const Navbar = () => {
           />
         </Link>
       </div>
+
+      <CurrentTimeInBangla />
 
       {/* Center: Navigation Links (Desktop View) */}
       <div className="hidden md:flex space-x-6 text-black font-bold font-bengali text-sm md:text-lg lg:text-xl">

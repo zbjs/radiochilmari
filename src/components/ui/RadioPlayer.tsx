@@ -1,8 +1,9 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import ReadioChilmaryLogo from '@/assets/icons/readio_icon.png'
+import ReadioChilmaryLogo from '@/assets/icons/readio_icon.png';
 import Image from 'next/image';
+import { FaPlay, FaPause, FaHeart, FaVolumeUp } from 'react-icons/fa';
 
 const RadioPlayer: React.FC = () => {
     const [playbackSpeed, setPlaybackSpeed] = useState('1x');
@@ -111,41 +112,20 @@ const RadioPlayer: React.FC = () => {
             </div>
             <div className="bg-slate-50 text-slate-500 transition-all duration-500 dark:bg-slate-600  dark:text-slate-200 rounded-b-xl flex items-center">
                 <div className="flex-auto flex items-center justify-evenly">
-                    <button type="button" aria-label="Add to favorites">
-                        <svg width="24" height="24">
-                            <path
-                                d="M7 6.931C7 5.865 7.853 5 8.905 5h6.19C16.147 5 17 5.865 17 6.931V19l-5-4-5 4V6.931Z"
-                                fill="currentColor"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            ></path>
-                        </svg>
+                    <button type="button" aria-label="Add to favorites" className="text-red-500 hover:text-red-700 transition-colors duration-300">
+                        <FaHeart size={20} />
                     </button>
                 </div>
                 <button
                     type="button"
-                    className="bg-white text-slate-900 transition-all duration-500 dark:bg-slate-100  dark:text-slate-700 flex-none -my-2 mx-auto w-20 h-20 rounded-full ring-1 ring-slate-900/5 shadow-md flex items-center justify-center"
+                    className="bg-white text-slate-900 transition-all duration-500 dark:bg-slate-100 dark:text-slate-700 flex-none -my-2 mx-auto w-20 h-20 rounded-full ring-1 ring-slate-900/5 shadow-md flex items-center justify-center"
                     aria-label={isPlaying ? "Pause" : "Play"}
                     onClick={togglePlayPause}
                 >
                     {isPlaying ? (
-                        <svg width="30" height="32" fill="currentColor">
-                            <rect x="6" y="4" width="4" height="24" rx="2"></rect>
-                            <rect x="20" y="4" width="4" height="24" rx="2"></rect>
-                        </svg>
+                        <FaPause size={24} className="text-red-500" />
                     ) : (
-                        <svg width="30" height="32" fill="currentColor">
-                            <path
-                                d="M4 5v24l18-12L4 5z"
-                                fill="currentColor"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            ></path>
-                        </svg>
+                        <FaPlay size={24} className="text-green-500" />
                     )}
                 </button>
                 <div className="flex-auto flex items-center justify-evenly">
