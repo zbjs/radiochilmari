@@ -1,18 +1,10 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const CookieConsent: React.FC = () => {
   // State to control visibility of the cookie consent
   const [isVisible, setIsVisible] = useState<boolean>(false);
-
-  // Show the consent bar only if the user has not given consent
-  useEffect(() => {
-    const consent = localStorage.getItem('cookieConsent');
-    if (!consent) {
-      setIsVisible(true);
-    }
-  }, []);
 
   // Handle the "Accept" button click
   const handleAccept = () => {
@@ -53,9 +45,9 @@ const CookieConsent: React.FC = () => {
               </svg>
             </span>
             <div>
-              <h3 className="text-lg font-bold text-black dark:text-white">We use cookies</h3>
-              <p className="text-sm font-medium text-gray-600 dark:text-gray-300">
-                Please accept our cookies so we can provide the best experience.
+              <h3 className="text-sm font-bold text-black dark:text-white">আমরা কুকিজ ব্যবহার করি</h3>
+              <p className="text-xs font-medium text-gray-600 dark:text-gray-300">
+              অনুগ্রহ করে আমাদের কুকিজ গ্রহণ করুন যাতে আমরা সেরা অভিজ্ঞতা প্রদান করতে পারি।
               </p>
             </div>
           </div>
@@ -65,13 +57,13 @@ const CookieConsent: React.FC = () => {
               onClick={handleDecline}
               className="rounded-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-600 dark:text-gray-100 px-6 py-2 transition-all"
             >
-              Decline
+              প্রত্যাখ্যান
             </button>
             <button
               onClick={handleAccept}
               className="rounded-full bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 transition-all"
             >
-              Accept
+              গ্রহণ করুন
             </button>
           </div>
         </div>
